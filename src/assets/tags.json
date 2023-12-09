@@ -1,0 +1,62 @@
+[
+    {
+        "color": "#FF5733",
+        "name": "Electronics"
+    },
+    {
+        "color": "#3498DB",
+        "name": "Gaming"
+    },
+    {
+        "color": "#2ECC71",
+        "name": "Kitchen"
+    },
+    {
+        "color": "#F1C40F",
+        "name": "Footwear"
+    },
+    {
+        "color": "#9B59B6",
+        "name": "Audio"
+    },
+    {
+        "color": "#E74C3C",
+        "name": "Photography"
+    },
+    {
+        "color": "#95A5A6",
+        "name": "Fitness"
+    },
+    {
+        "color": "#1ABC9C",
+        "name": "Cookware"
+    },
+    {
+        "color": "#D35400",
+        "name": "Home Office"
+    },
+    {
+        "color": "#27AE60",
+        "name": "Entertainment"
+    },
+    {
+        "color": "#8E44AD",
+        "name": "Fashion"
+    },
+    {
+        "color": "#C0392B",
+        "name": "Health & Beauty"
+    },
+    {
+        "color": "#34495E",
+        "name": "Home Decor"
+    },
+    {
+        "color": "#F39C12",
+        "name": "Outdoor"
+    },
+    {
+        "color": "#2C3E50",
+        "name": "Travel"
+    }
+]

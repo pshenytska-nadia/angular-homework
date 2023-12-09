@@ -1,0 +1,214 @@
+[
+  {
+    "id": 1,
+    "title": "Laptop",
+    "description": "Powerful laptop with high-performance specs for gaming and productivity.",
+    "price": 1299.99,
+    "tags": [
+      {
+        "color": "#FF5733",
+        "name": "Electronics"
+      },
+      {
+        "color": "#3498DB",
+        "name": "Gaming"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Smartphone",
+    "description": "Latest smartphone with a stunning display, advanced camera, and long battery life.",
+    "price": 799.99,
+    "tags": [
+      {
+        "color": "#FF5733",
+        "name": "Electronics"
+      },
+      {
+        "color": "#9B59B6",
+        "name": "Audio"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Coffee Maker",
+    "description": "Modern coffee maker with programmable features for the perfect cup of coffee.",
+    "price": 89.99,
+    "tags": [
+      {
+        "color": "#2ECC71",
+        "name": "Kitchen"
+      },
+      {
+        "color": "#F39C12",
+        "name": "Outdoor"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Running Shoes",
+    "description": "Comfortable and durable running shoes designed for both casual runners and athletes.",
+    "price": 69.99,
+    "tags": [
+      {
+        "color": "#27AE60",
+        "name": "Fashion"
+      },
+      {
+        "color": "#F39C12",
+        "name": "Outdoor"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise-canceling technology for an immersive audio experience.",
+    "price": 129.99,
+    "tags": [
+      {
+        "color": "#9B59B6",
+        "name": "Audio"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Digital Camera",
+    "description": "Professional-grade digital camera with advanced features for photography enthusiasts.",
+    "price": 499.99,
+    "tags": [
+      {
+        "color": "#E74C3C",
+        "name": "Photography"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Fitness Tracker",
+    "description": "Smart fitness tracker to monitor your health, track workouts, and set fitness goals.",
+    "price": 79.99,
+    "tags": [
+      {
+        "color": "#95A5A6",
+        "name": "Fitness"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Cookware Set",
+    "description": "Premium cookware set with non-stick coating and heat-resistant handles for effortless cooking.",
+    "price": 149.99,
+    "tags": [
+      {
+        "color": "#1ABC9C",
+        "name": "Cookware"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Desktop Monitor",
+    "description": "High-resolution desktop monitor with a sleek design for enhanced productivity.",
+    "price": 299.99,
+    "tags": [
+      {
+        "color": "#27AE60",
+        "name": "Electronics"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Gaming Console",
+    "description": "Next-gen gaming console with realistic graphics and a vast library of games.",
+    "price": 399.99,
+    "tags": [
+      {
+        "color": "#3498DB",
+        "name": "Gaming"
+      },
+      {
+        "color": "#27AE60",
+        "name": "Electronics"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Bluetooth Speaker",
+    "description": "Portable Bluetooth speaker with crystal-clear sound for music on the go.",
+    "price": 59.99,
+    "tags": [
+      {
+        "color": "#9B59B6",
+        "name": "Audio"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Travel Backpack",
+    "description": "Durable and spacious travel backpack with multiple compartments for organized packing.",
+    "price": 89.99,
+    "tags": [
+      {
+        "color": "#F39C12",
+        "name": "Outdoor"
+      },
+      {
+        "color": "#2C3E50",
+        "name": "Travel"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Smart TV",
+    "description": "Ultra HD smart TV with streaming capabilities and a user-friendly interface.",
+    "price": 799.99,
+    "tags": [
+      {
+        "color": "#27AE60",
+        "name": "Electronics"
+      },
+      {
+        "color": "#34495E",
+        "name": "Home Decor"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Electric Toothbrush",
+    "description": "Advanced electric toothbrush with multiple brushing modes for optimal oral hygiene.",
+    "price": 49.99,
+    "tags": [
+      {
+        "color": "#C0392B",
+        "name": "Health & Beauty"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Home Security System",
+    "description": "Comprehensive home security system with cameras, sensors, and remote monitoring.",
+    "price": 399.99,
+    "tags": [
+      {
+        "color": "#1ABC9C",
+        "name": "Security"
+      },
+      {
+        "color": "#34495E",
+        "name": "Home Decor"
+      }
+    ]
+  }
+]
