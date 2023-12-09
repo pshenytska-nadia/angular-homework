@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products$ | async">
+      <td>{{ product.id }}</td>
+      <td>{{ product.title }}</td>
+      <td>{{ product.description }}</td>
+      <td>${{ product.price }}</td>
+      <td>
+        <div
+          *ngFor="let tag of product.tags"
+          class="tag"
+          [style.backgroundColor]="tag.color"
+        >
+          {{ tag.name }}
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
