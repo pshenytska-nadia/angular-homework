@@ -64,6 +64,17 @@ header button {
   cursor: pointer;
 }
 
-button:hover {
+header button:hover {
   background-color: #975b5f;
+}
+
+.btn-controls {
+  background-color: #ffc0cb;
+  cursor: pointer;
+  border-radius: 15%;
+  margin: 5px 10px;
+}
+
+.btn-controls:hover {
+  background-color: #fe9fad;
 }

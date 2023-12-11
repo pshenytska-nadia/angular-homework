@@ -16,9 +16,9 @@ import { Observable } from 'rxjs';
 })
 export class AddProductFormComponent {
   @Input() visible!: boolean | undefined;
+  @Input() selectedProduct!: IProduct;
   @Output() visibleChange = new EventEmitter<boolean>();
 
-  public newProduct: IProduct = new Product(0, '', '', 0);
   public tags$: Observable<ITag[]> = this.tagsService.tags$;
 
   constructor(
@@ -27,9 +27,11 @@ export class AddProductFormComponent {
   ) {}
 
   public addProduct(): void {
-    console.log('TAGS: ', this.tagsService.tags);
-    this.productsService.addProduct(this.newProduct);
-    this.newProduct = new Product(0, '', '', 0);
+    if (!this.productsService.products.includes(this.selectedProduct)) {
+      this.productsService.addProduct(this.selectedProduct);
+    }
+
+    this.selectedProduct = new Product(0, '', '', 0);
     this.closeModal();
   }
 
@@ -42,11 +44,11 @@ export class AddProductFormComponent {
     const isChecked = event.target.checked;
 
     if (isChecked) {
-      this.newProduct.tags.push(tag);
+      this.selectedProduct.tags.push(tag);
     } else {
-      const index = this.newProduct.tags.indexOf(tag);
+      const index = this.selectedProduct.tags.indexOf(tag);
       if (index !== -1) {
-        this.newProduct.tags.splice(index, 1);
+        this.selectedProduct.tags.splice(index, 1);
       }
     }
   }

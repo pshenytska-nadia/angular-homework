@@ -18,7 +18,15 @@ export class TagsService {
   public setTags(tags: ITag[]): void {
     this.tags = tags;
   }
-  public addTag(newProduct: ITag): void {
-    this.tags = [...this.tags, newProduct];
+  public addTag(newTag: ITag): void {
+    this.tags = [...this.tags, newTag];
+  }
+  public updateTag(updatedTag: ITag): void {
+    this.tags = this.tags.map((tag) =>
+      tag.color === updatedTag.color ? { ...tag, ...updatedTag } : tag
+    );
+  }
+  public deleteTag(color: string): void {
+    this.tags = this.tags.filter((tag) => tag.color !== color);
   }
 }

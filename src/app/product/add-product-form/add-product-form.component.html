@@ -7,19 +7,19 @@
     <input
       type="text"
       name="title"
-      [(ngModel)]="newProduct.title"
+      [(ngModel)]="selectedProduct.title"
       placeholder="Title"
     />
     <textarea
       name="description"
-      [(ngModel)]="newProduct.description"
+      [(ngModel)]="selectedProduct.description"
       placeholder="Description"
     ></textarea>
     <input
       type="number"
       min="1"
       name="price"
-      [(ngModel)]="newProduct.price"
+      [(ngModel)]="selectedProduct.price"
       placeholder="Price"
     />
     <div
@@ -30,10 +30,10 @@
       {{ tag.name }}
       <input
         type="checkbox"
-        [checked]="newProduct.tags.includes(tag)"
+        [checked]="selectedProduct.tags.includes(tag)"
         (change)="updateTags(tag, $event)"
       />
     </div>
-    <button (click)="addProduct()">+ Add Product</button>
+    <button (click)="addProduct()">Save Product</button>
   </form>
 </div>

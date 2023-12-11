@@ -11,7 +11,7 @@ import { TagsService } from '../../services/tags.service';
   styleUrl: './add-tag.component.scss',
 })
 export class AddTagComponent {
-  @Input() visible!: boolean | undefined;
+  @Input() visible: boolean | undefined;
   @Output() visibleChange = new EventEmitter<boolean>();
 
   public newTag: ITag = new Tag('#000', '');

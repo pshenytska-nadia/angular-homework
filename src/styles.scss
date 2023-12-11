@@ -1,6 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@include mat.core();
+$angular-homework-primary: mat.define-palette(mat.$indigo-palette);
+$angular-homework-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$angular-homework-warn: mat.define-palette(mat.$red-palette);
+$angular-homework-theme: mat.define-light-theme((
+  color: (
+    primary: $angular-homework-primary,
+    accent: $angular-homework-accent,
+    warn: $angular-homework-warn,
+  )
+));
+@include mat.all-component-themes($angular-homework-theme);
+
 
 body {
   margin: 0;
   padding: 0;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

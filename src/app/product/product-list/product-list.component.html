@@ -10,6 +10,7 @@
       <th>Description</th>
       <th>Price</th>
       <th>Tags</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -27,8 +28,23 @@
           {{ tag.name }}
         </div>
       </td>
+      <td>
+        <button (click)="editProduct(product)" class="btn-controls">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          (click)="deleteProduct(product.id)"
+          class="btn-controls"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
-<app-add-product-form [(visible)]="addProductVisibility"></app-add-product-form>
+<app-add-product-form
+  [(visible)]="addProductVisibility"
+  [selectedProduct]="selectedProduct"
+></app-add-product-form>
 <app-add-tag [(visible)]="addTagVisibility"></app-add-tag>
