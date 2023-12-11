@@ -15,11 +15,8 @@ export class Product implements IProduct {
   price: number;
   tags: ITag[];
 
-  constructor(title: string, description: string, price: number) {
-    this.id = Math.abs(
-      new Date('08/12/2023 12:56 PM').getTime() - new Date().getTime()
-    );
-
+  constructor(id: number, title: string, description: string, price: number) {
+    this.id = id;
     this.title = title;
     this.description = description;
     this.price = price;

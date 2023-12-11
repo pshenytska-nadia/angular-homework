@@ -1,3 +1,7 @@
+<header>
+  <button (click)="addProductVisibility = true">+ Add Product</button>
+  <button (click)="addTagVisibility = true">+ Create new tag</button>
+</header>
 <table>
   <thead>
     <tr>
@@ -26,3 +30,5 @@
     </tr>
   </tbody>
 </table>
+<app-add-product-form [(visible)]="addProductVisibility"></app-add-product-form>
+<app-add-tag [(visible)]="addTagVisibility"></app-add-tag>

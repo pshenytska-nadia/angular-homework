@@ -1,0 +1,21 @@
+<div [style.display]="visible ? 'block' : 'none'" class="add-tag">
+  <div class="add-tag-header">
+    <h3>Add new tag</h3>
+    <button (click)="closeModal()" class="btn-close">✖</button>
+  </div>
+  <form>
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="newTag.name"
+      placeholder="Name"
+    />
+    <input
+      type="color"
+      name="color"
+      [(ngModel)]="newTag.color"
+      placeholder="Color"
+    />
+    <button (click)="addTag()">+ Add Tag</button>
+  </form>
+</div>

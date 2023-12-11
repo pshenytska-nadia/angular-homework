@@ -1,33 +1,24 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
 import { ITag } from '../tag/tag.model';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TagsService {
-  private apiUrl = '../assets/tags.json';
+  private readonly _tags$ = new BehaviorSubject<ITag[]>([]);
+  public readonly tags$ = this._tags$.asObservable();
 
-  constructor(private http: HttpClient) {}
-
-  getTags(): Observable<ITag[]> {
-    return this.http
-      .get<ITag[]>(this.apiUrl)
-      .pipe(catchError(this.handleError('getTags', [])));
+  get tags(): ITag[] {
+    return this._tags$.getValue();
   }
-
-  getTag(name: string): Observable<ITag | undefined> {
-    return this.getTags().pipe(
-      map((tags) => tags.find((tag) => tag.name === name))
-    );
+  private set tags(tags: ITag[]) {
+    this._tags$.next(tags);
   }
-
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error);
-      return of(result as T);
-    };
+  public setTags(tags: ITag[]): void {
+    this.tags = tags;
+  }
+  public addTag(newProduct: ITag): void {
+    this.tags = [...this.tags, newProduct];
   }
 }

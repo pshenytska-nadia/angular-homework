@@ -1,0 +1,39 @@
+<div [style.display]="visible ? 'block' : 'none'" class="add-product-form">
+  <div class="add-product-header">
+    <h3>Add new product</h3>
+    <button (click)="closeModal()" class="btn-close">✖</button>
+  </div>
+  <form>
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="newProduct.title"
+      placeholder="Title"
+    />
+    <textarea
+      name="description"
+      [(ngModel)]="newProduct.description"
+      placeholder="Description"
+    ></textarea>
+    <input
+      type="number"
+      min="1"
+      name="price"
+      [(ngModel)]="newProduct.price"
+      placeholder="Price"
+    />
+    <div
+      *ngFor="let tag of tags$ | async"
+      class="tag"
+      [style.backgroundColor]="tag.color"
+    >
+      {{ tag.name }}
+      <input
+        type="checkbox"
+        [checked]="newProduct.tags.includes(tag)"
+        (change)="updateTags(tag, $event)"
+      />
+    </div>
+    <button (click)="addProduct()">+ Add Product</button>
+  </form>
+</div>
