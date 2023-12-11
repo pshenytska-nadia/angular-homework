@@ -43,31 +43,6 @@ table {
   color: #ffffff;
 }
 
-header {
-  background-color: #f8bbd0;
-  padding: 20px 5%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: right;
-}
-
-header button {
-  box-sizing: border-box;
-  background-color: #dd868c;
-  color: #654924;
-  padding: 8px 16px;
-  margin-left: 10px;
-  border: none;
-  border-radius: 4px;
-  font-size: larger;
-  cursor: pointer;
-}
-
-header button:hover {
-  background-color: #975b5f;
-}
-
 .btn-controls {
   background-color: #ffc0cb;
   cursor: pointer;

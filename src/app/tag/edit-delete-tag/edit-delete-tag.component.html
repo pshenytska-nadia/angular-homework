@@ -1,0 +1,22 @@
+<div [style.display]="visible ? 'block' : 'none'" class="edit-tag">
+  <div class="edit-tag-header">
+    <h3>Edit tag</h3>
+    <button (click)="closeModal()" class="btn-close">✖</button>
+  </div>
+  <form>
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="tagToEdit.name"
+      placeholder="Name"
+    />
+    <input
+      type="color"
+      name="color"
+      [(ngModel)]="tagToEdit.color"
+      placeholder="Color"
+    />
+    <button (click)="addTag()">Save Tag</button>
+    <button (click)="deleteTag()">Delete Tag</button>
+  </form>
+</div>

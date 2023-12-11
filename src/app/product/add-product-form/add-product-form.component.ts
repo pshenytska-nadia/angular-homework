@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IProduct, Product } from '../product.model';
+import { IProduct } from '../product.model';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductsService } from '../../services/products.service';
@@ -30,13 +30,10 @@ export class AddProductFormComponent {
     if (!this.productsService.products.includes(this.selectedProduct)) {
       this.productsService.addProduct(this.selectedProduct);
     }
-
-    this.selectedProduct = new Product(0, '', '', 0);
     this.closeModal();
   }
 
   closeModal() {
-    this.visible = false;
     this.visibleChange.emit(this.visible);
   }
 

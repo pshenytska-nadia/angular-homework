@@ -1,6 +1,7 @@
 <header>
   <button (click)="addProductVisibility = true">+ Add Product</button>
   <button (click)="addTagVisibility = true">+ Create new tag</button>
+  <button (click)="goToTags()">Manage Tags</button>
 </header>
 <table>
   <thead>
@@ -44,7 +45,8 @@
   </tbody>
 </table>
 <app-add-product-form
-  [(visible)]="addProductVisibility"
+  [visible]="addProductVisibility"
   [selectedProduct]="selectedProduct"
+  (visibleChange)="resetData()"
 ></app-add-product-form>
 <app-add-tag [(visible)]="addTagVisibility"></app-add-tag>

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { MatIconModule } from '@angular/material/icon';
+import { Observable } from 'rxjs';
 import { AddProductFormComponent } from '../add-product-form/add-product-form.component';
 import { AddTagComponent } from '../../tag/add-tag/add-tag.component';
 import { ApiService } from '../../services/api.service';
@@ -25,17 +25,10 @@ import { ITag } from '../../tag/tag.model';
   ],
 })
 export class ProductListComponent implements OnInit {
-  deleteProduct(productId: number) {
-    this.productsService.deleteProduct(productId);
-  }
-  editProduct(product: IProduct) {
-    this.selectedProduct = product;
-    this.addProductVisibility = true;
-  }
   public addProductVisibility!: boolean | undefined;
   public addTagVisibility: boolean | undefined;
   public products$: Observable<IProduct[]> = this.productsService.products$;
-  public tags: Observable<ITag[]> = this.tagsService.tags$;
+  public tags$: Observable<ITag[]> = this.tagsService.tags$;
   public selectedProduct: IProduct = new Product(0, '', '', 0);
 
   constructor(
@@ -53,5 +46,20 @@ export class ProductListComponent implements OnInit {
     this.apiService
       .getTags()
       .subscribe((tags) => this.tagsService.setTags(tags));
+  }
+
+  resetData() {
+    this.selectedProduct = new Product(0, '', '', 0);
+    this.addProductVisibility = false;
+  }
+  deleteProduct(productId: number) {
+    this.productsService.deleteProduct(productId);
+  }
+  editProduct(product: IProduct) {
+    this.selectedProduct = product;
+    this.addProductVisibility = true;
+  }
+  goToTags() {
+    this.router.navigate(['manage-tags']);
   }
 }

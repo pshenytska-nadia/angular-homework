@@ -1,0 +1,20 @@
+<header style="justify-content: left">
+  <button (click)="goBack()">Go Back</button>
+</header>
+<h3>Click on tag to edit or delete</h3>
+<div class="tag-container">
+  <div *ngFor="let tag of tags$ | async">
+    <div
+      class="tag"
+      [style.backgroundColor]="tag.color"
+      (click)="openModal(tag)"
+    >
+      {{ tag.name }}
+    </div>
+  </div>
+</div>
+
+<app-edit-delete-tag
+  [(visible)]="dialogVisibility"
+  [tagToEdit]="tagToEdit"
+></app-edit-delete-tag>
